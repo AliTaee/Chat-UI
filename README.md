@@ -1,5 +1,13 @@
 # Digikala Front-end challenge
 
+## "Telegram Chats List, Chat Page, and Contacts".
+
+**Chat Page:** A page with a list of messages, header with a profile picture, and one input in the bottom and a button for sending the message, after sending a message a reply will be shown in the list after 2 seconds, if you click on the header you will see user details.
+
+**Chat List:** A page with some chats that is like the first page of the telegram, a profile picture, and last message on that chat, if you click on one chat item you will navigate to the chat page.
+
+**Contacts:** A page with a list of contacts, with a profile picture and names. If you click on one of them you will navigate to Contact Info Page and you will see a message button, and if you click on message button in user info page you will navigate to chat page
+
 ## Installation
 
 You need to install [Node js](https://nodejs.org/) on your system.
