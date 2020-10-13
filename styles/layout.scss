@@ -1,0 +1,48 @@
+html,
+body {
+	background-color: $primary-main;
+	font-family: sans-serif;
+	color: $primary-white;
+	height: 100%;
+}
+
+.telegram {
+	max-width: $layout-desktop-width;
+	background: $primary-light;
+	margin: 0 auto;
+	height: 100%;
+	display: flex;
+}
+
+.chat__list {
+	background: $primary-main;
+	height: 100%;
+	width: 35%;
+}
+
+.chat__page {
+	background: $primary-dark;
+	height: 100%;
+	width: 65%;
+}
+
+@media only screen and (max-width: $layout-tablet-width) {
+	.chat__list {
+		min-width: 300px;
+	}
+
+	.chat__page {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: $layout-tablet-small-width) {
+	.telegram {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.chat__list {
+		min-width: 100%;
+	}
+}

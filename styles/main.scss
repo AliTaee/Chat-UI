@@ -1,8 +1,3 @@
 @import "./normalize.scss";
-@import "./colors.scss";
-
-html,
-body {
-  background-color: $primary-main;
-  color: $primary-white;
-}
+@import "./var.scss";
+@import "./layout.scss";
