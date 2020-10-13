@@ -1,0 +1,91 @@
+{
+    "chatList": [{
+			"id": 0,
+			"name": "Ali Taee",
+			"userName": "alitaeejs",
+			"avatar": "/assets/user-profile/ali-taee.jpg",
+			"about": "Front-end Developer",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "Hi how are you?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Hi, I'm fine how about you?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "I'm good thanks."
+			}]
+		},
+		{
+			"id": 1,
+			"name": "Google",
+			"userName": "google",
+			"avatar": "/assets/user-profile/google.png",
+			"about": "Ask me anything!",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "Hi how are you?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Hi, I'm fine how about you?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "I'm good thanks."
+			}]
+		},
+		{
+			"id": 2,
+			"name": "React",
+			"userName": "reactjs",
+			"avatar": "/assets/user-profile/react.png",
+			"about": "A JavaScript library for building user interfaces",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "Hi how are you?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Hi, I'm fine how about you?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "I'm good thanks."
+			}]
+		},
+		{
+			"id": 3,
+			"name": "Vue",
+			"userName": "vuejs",
+			"avatar": "/assets/user-profile/vue.png",
+			"about": "The Progressive JavaScript Framework",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "Hi how are you?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Hi, I'm fine how about you?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "I'm good thanks."
+			}]
+        }
+    ]
+}
