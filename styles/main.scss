@@ -1,13 +1,8 @@
 @import "./normalize.scss";
-
-/*
-* Colors
-*/
-$main-color: #17212b;
-$main-white: #fefefe;
+@import "./colors.scss";
 
 html,
 body {
-  background-color: $main-color;
-  color: $main-white;
+  background-color: $primary-main;
+  color: $primary-white;
 }
