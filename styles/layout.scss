@@ -42,8 +42,6 @@ body {
 	}
 
 	&ــitem {
-		padding: 7px 5px 7px 10px;
-
 		&:hover{
 			cursor: pointer;
 			background-color: $primary-light-hover;
@@ -54,6 +52,10 @@ body {
 .profile {
 	display: flex;
 	align-items: center;
+
+	&--background-light {
+		background-color: $primary-main;
+	}
 
 	&__avatar {
 		width: $profile-avatar;
@@ -74,6 +76,7 @@ body {
 		justify-content: space-evenly;
 	}
 
+	&__about,
 	&__last-message {
 		overflow: hidden;
 		white-space: nowrap;

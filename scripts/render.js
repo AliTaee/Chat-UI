@@ -5,7 +5,7 @@ export function renderChatList(chatList) {
     const { avatar, name, chats } = chat
 
     let chatItem = document.createElement('li')
-    chatItem.classList.add('chat-listــitem', 'profile')
+    chatItem.classList.add('chat-listــitem', 'profile', 'profile-area-padding')
 
     let avatarElement = document.createElement('span')
     avatarElement.classList.add('profile__avatar')
