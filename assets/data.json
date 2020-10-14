@@ -3,7 +3,7 @@
 			"id": 0,
 			"name": "Ali Taee",
 			"userName": "alitaeejs",
-			"avatar": "/assets/user-profile/ali-taee.jpg",
+			"avatar": "./user-profile/ali-taee.jpg",
 			"about": "Front-end Developer",
             "chats": [{
 				"isFromFriend": false,
@@ -25,66 +25,51 @@
 			"id": 1,
 			"name": "Google",
 			"userName": "google",
-			"avatar": "/assets/user-profile/google.png",
+			"avatar": "./user-profile/google.png",
 			"about": "Ask me anything!",
             "chats": [{
-				"isFromFriend": false,
-				"date": null,
-				"message": "Hi how are you?"
-			},
-			{
 				"isFromFriend": true,
 				"date": null,
-				"message": "Hi, I'm fine how about you?"
+				"message": "What do you want to know?"
 			},
 			{
 				"isFromFriend": false,
 				"date": null,
-				"message": "I'm good thanks."
+				"message": "React or Vue?"
 			}]
 		},
 		{
 			"id": 2,
 			"name": "React",
 			"userName": "reactjs",
-			"avatar": "/assets/user-profile/react.png",
+			"avatar": "./user-profile/react.png",
 			"about": "A JavaScript library for building user interfaces",
             "chats": [{
 				"isFromFriend": false,
 				"date": null,
-				"message": "Hi how are you?"
+				"message": "What is JSX?"
 			},
 			{
 				"isFromFriend": true,
 				"date": null,
-				"message": "Hi, I'm fine how about you?"
-			},
-			{
-				"isFromFriend": false,
-				"date": null,
-				"message": "I'm good thanks."
+				"message": "It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like."
 			}]
 		},
 		{
 			"id": 3,
 			"name": "Vue",
 			"userName": "vuejs",
-			"avatar": "/assets/user-profile/vue.png",
+			"avatar": "./user-profile/vue.png",
 			"about": "The Progressive JavaScript Framework",
             "chats": [{
 				"isFromFriend": false,
 				"date": null,
-				"message": "Hi how are you?"
+				"message": "why Vue.js?"
 			},
 			{
 				"isFromFriend": true,
 				"date": null,
-				"message": "Hi, I'm fine how about you?"
-			},
-			{
-				"isFromFriend": false,
-				"date": null,
-				"message": "I'm good thanks."
+				"message": "Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries."
 			}]
         }
     ]
