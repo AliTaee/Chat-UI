@@ -42,6 +42,11 @@ body {
 
 	&ــitem {
 		padding: 7px 5px 7px 10px;
+
+		&:hover{
+			cursor: pointer;
+			background-color: $primary-light-hover;
+		}
 	}
 }
 
@@ -73,6 +78,7 @@ body {
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		width: $chat-list-width - 77;
+		color: $gray;
 	}
 }
 
