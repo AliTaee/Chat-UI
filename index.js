@@ -17,11 +17,15 @@ export function setState(propertyKey, value) {
   chatData = { ...chatData, [propertyKey]: value }
 }
 
+export const getState = (propertyKey) => {
+  return chatData[propertyKey]
+}
+
 readDataFromJson
   .then((result) => {
     const { chatList, contacts, userProfile } = result
     chatData = { ...chatData, chatList, contacts, userProfile }
-    renderChatList(chatData)
+    renderChatList()
   })
   .catch((error) => console.error(error))
 
@@ -49,7 +53,7 @@ SendButtonElement.addEventListener('click', () => {
   messageInputElement.style.height = '23px'
 
   renderNewMessage(newMessageText, chatData.userProfile)
-  console.info('chatData', chatData)
+  console.info('updated chat data', chatData)
 })
 
 messageInputElement.addEventListener('input', () => {

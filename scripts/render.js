@@ -8,7 +8,7 @@ import {
   removeClassFromAllDocument,
 } from './dom-utility'
 
-import { setState } from '../index'
+import { setState, getState } from '../index'
 
 // Chat page main Id and class namess
 const chatPageId = 'chat-page'
@@ -41,10 +41,13 @@ function setHeaderProfile(avatar, name, about) {
   setBackgroundImage(profileAvatarId, avatar)
 }
 
-function setMessages(messages, avatar, userProfile) {
+function setMessages(id, avatar, userProfile) {
+  const chatList = getState('chatList')
+  const getLastMessages = chatList.filter((chat) => chat.id === id)[0].chats
+
   removeChildElement(messageListsId)
 
-  messages.forEach((messageItem) => {
+  getLastMessages.forEach((messageItem) => {
     let avatarImage = ''
 
     const messageElement = document.createElement('li')
@@ -77,11 +80,12 @@ function setMessages(messages, avatar, userProfile) {
   })
 }
 
-export function renderChatList(chatData) {
-  const { chatList, userProfile } = chatData
+export function renderChatList() {
+  const chatList = getState('chatList')
+  const userProfile = getState('userProfile')
 
   chatList.forEach((chat) => {
-    const { avatar, name, chats, about } = chat
+    const { avatar, name, chats, about, id } = chat
 
     let chatItem = document.createElement('li')
     chatItem.classList.add('chat-listــitem', 'profile', 'profile-area-padding')
@@ -112,7 +116,7 @@ export function renderChatList(chatData) {
     chatItem.addEventListener('click', () => {
       handleActiveChatPage(chatItem)
       setHeaderProfile(avatar, name, about)
-      setMessages(chats, avatar, userProfile)
+      setMessages(id, avatar, userProfile)
       setState('activeChat', chat)
     })
 
