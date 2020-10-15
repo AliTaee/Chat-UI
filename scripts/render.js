@@ -9,38 +9,38 @@ import {
 } from './dom-utility'
 
 // Chat page main Id and class namess
-const chatPage = 'chat-page'
+const chatPageId = 'chat-page'
 const chatSectionId = 'chat-section'
 const activeClassName = 'active-profile'
-const startMessaging = 'start-messaging'
+const startMessagingId = 'start-messaging'
 const chatListWrapper = document.getElementById('chat-list')
 
 // Chat section main Id and class names
 // profile
-const profileName = 'profile-name'
-const profileAbout = 'profile-about'
-const profileAvatar = 'profile-avatar'
+const profileNameId = 'profile-name'
+const profileAboutId = 'profile-about'
+const profileAvatarId = 'profile-avatar'
 
 // Chat messages
-const messageLists = 'message-lists'
+const messageListsId = 'message-lists'
 
 function handleActiveChatPage(chatItem) {
   removeClassFromAllDocument(activeClassName)
   chatItem.classList.add(activeClassName)
   removeStyleFromElement(chatSectionId, 'display')
-  removeClassFromElement(chatPage, 'center-layout')
-  setStyleToElement(startMessaging, 'display', 'none')
+  removeClassFromElement(chatPageId, 'center-layout')
+  setStyleToElement(startMessagingId, 'display', 'none')
 }
 
 function setHeaderProfile(avatar, name, about) {
-  addInnerText(profileName, name)
-  addInnerText(profileAbout, about)
-  setBackgroundImage(profileAvatar, avatar)
+  addInnerText(profileNameId, name)
+  addInnerText(profileAboutId, about)
+  setBackgroundImage(profileAvatarId, avatar)
 }
 
 function setMessages(messages, avatar) {
-  const messageListWrapper = document.getElementById(messageLists)
-  removeChildElement(messageLists)
+  const messageListWrapper = document.getElementById(messageListsId)
+  removeChildElement(messageListsId)
 
   const messageElement = document.createElement('li')
   messageElement.classList.add('chat-page__message')

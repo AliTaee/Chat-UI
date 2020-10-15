@@ -12,7 +12,6 @@ readDataFromJson
   .then((result) => {
     const { chatList, contacts, userProfile } = result
     chatData = { ...chatData, chatList, contacts, userProfile }
-    console.info('chatData', chatData)
     renderChatList(chatData)
   })
   .catch((error) => console.error(error))
