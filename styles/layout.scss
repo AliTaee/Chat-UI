@@ -118,7 +118,10 @@ body {
 
 	&__main {
 		overflow: auto;
-    	height: calc(100vh - 66px);
+		height: calc(100vh - 66px);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 	}
 
 	&__messages {
@@ -128,7 +131,7 @@ body {
 	&__message {
 		display: flex;
 		align-items: flex-end;
-		margin: 0 0 6px 10px;
+		margin: 0 6px 10px;
 	}
 
 	&__texts {
@@ -166,10 +169,11 @@ body {
 
 	&__text {
 	background: $primary-blue;
+	white-space: break-spaces;
     border-radius: 5px;
     padding: 5px;
-    height: 30px;
-    display: inline-block;
+    min-height: 30px;
+	display: block;
 	margin-top: 3px;
 	
 		&--freind {

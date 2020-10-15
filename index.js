@@ -2,14 +2,17 @@
 import { readDataFromJson } from './scripts/fetch-data'
 import { renderChatList } from './scripts/render'
 
-const chatData = {
-  list: [],
+let chatData = {
+  chatList: [],
   contacts: [],
+  userProfile: {},
 }
 
 readDataFromJson
   .then((result) => {
-    chatData.list = result.chatList
+    const { chatList, contacts, userProfile } = result
+    chatData = { ...chatData, chatList, contacts, userProfile }
+    console.info('chatData', chatData)
     renderChatList(chatData)
   })
   .catch((error) => console.error(error))

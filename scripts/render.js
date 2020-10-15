@@ -2,6 +2,7 @@ import {
   addInnerText,
   setStyleToElement,
   setBackgroundImage,
+  removeChildElement,
   removeClassFromElement,
   removeStyleFromElement,
   removeClassFromAllDocument,
@@ -20,6 +21,9 @@ const profileName = 'profile-name'
 const profileAbout = 'profile-about'
 const profileAvatar = 'profile-avatar'
 
+// Chat messages
+const messageLists = 'message-lists'
+
 function handleActiveChatPage(chatItem) {
   removeClassFromAllDocument(activeClassName)
   chatItem.classList.add(activeClassName)
@@ -34,10 +38,35 @@ function setHeaderProfile(avatar, name, about) {
   setBackgroundImage(profileAvatar, avatar)
 }
 
-export function renderChatList(chatData) {
-  const { list } = chatData
+function setMessages(messages, avatar) {
+  const messageListWrapper = document.getElementById(messageLists)
+  removeChildElement(messageLists)
 
-  list.forEach((chat) => {
+  const messageElement = document.createElement('li')
+  messageElement.classList.add('chat-page__message')
+
+  const AvatarElement = document.createElement('span')
+  AvatarElement.classList.add('profile__avatar', 'profile__avatar--small')
+  AvatarElement.style.backgroundImage = `url('${avatar}')`
+
+  const chatTextsWrapper = document.createElement('div')
+  chatTextsWrapper.classList.add('chat-page__texts')
+
+  messages.forEach((messageItem) => {
+    const chatText = document.createElement('span')
+    chatText.classList.add('chat-page__text')
+    chatText.innerText = messageItem.message
+    chatTextsWrapper.appendChild(chatText)
+  })
+  messageElement.appendChild(AvatarElement)
+  messageElement.appendChild(chatTextsWrapper)
+  messageListWrapper.appendChild(messageElement)
+}
+
+export function renderChatList(chatData) {
+  const { chatList } = chatData
+
+  chatList.forEach((chat) => {
     const { avatar, name, chats, about } = chat
 
     let chatItem = document.createElement('li')
@@ -69,6 +98,7 @@ export function renderChatList(chatData) {
     chatItem.addEventListener('click', () => {
       handleActiveChatPage(chatItem)
       setHeaderProfile(avatar, name, about)
+      setMessages(chats, avatar)
     })
 
     chatListWrapper.appendChild(chatItem)

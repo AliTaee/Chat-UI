@@ -22,3 +22,7 @@ export function addInnerText(idName, value) {
 export function setBackgroundImage(idName, value) {
   document.getElementById(idName).style.backgroundImage = `url(${value})`
 }
+
+export function removeChildElement(idName) {
+  document.getElementById(idName).innerHTML = null
+}
