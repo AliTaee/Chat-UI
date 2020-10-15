@@ -58,11 +58,11 @@ function setMessages(messages, avatar, userProfile) {
     chatText.classList.add('chat-page__text')
 
     if (messageItem.isFromFriend) {
-      avatarImage = userProfile.avatar
+      avatarImage = avatar
       chatText.classList.add('chat-page__text--freind')
       chatTextsWrapper.classList.add('chat-page__texts--freind')
     } else {
-      avatarImage = avatar
+      avatarImage = userProfile.avatar
     }
 
     AvatarElement.style.backgroundImage = `url('${avatarImage}')`
@@ -120,6 +120,13 @@ export function renderChatList(chatData) {
   })
 }
 
-export function renderNewMessage(message) {
+export function renderNewMessage(message, newChatLists) {
   console.info('new message', message)
+  console.info('newChatLists', newChatLists)
+  // const messageElement = document.createElement('li')
+  //   messageElement.classList.add('chat-page__message')
+
+  //   const AvatarElement = document.createElement('span')
+  //   const chatTextsWrapper = document.createElement('div')
+  //   const chatText = document.createElement('span')
 }
