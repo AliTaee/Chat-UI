@@ -130,8 +130,18 @@ body {
 
 	&__message {
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		margin: 0 6px 10px;
+		justify-content: flex-start;
+
+		& svg {
+			margin-left: 6px;
+			cursor: pointer;
+			
+			& path {
+				fill: $gray;
+			}
+		}
 	}
 
 	&__texts {
