@@ -107,6 +107,13 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 
+	&__start-messaging {
+		background-color: $primary-light;
+		border-radius: 15px;
+		padding: 5px 15px;
+		margin: 10px;
+	}
+
 	&__messages {
 		margin-bottom: 10px;
 	}
@@ -171,18 +178,29 @@ body {
 
 	&__send-message {
 		padding: 7px;
+		display: flex;
+    	align-items: flex-end;
+    	justify-content: space-between;
 	}
 
 	&__input-area {
 		border: none;
 		outline: none;
+		max-height: 250px;
+		overflow-y: auto;
+		flex-grow: 2;
 	}
 
-	&__start-messaging {
-		background-color: $primary-light;
-		border-radius: 15px;
-		padding: 5px 15px;
-		margin: 10px;
+	&__send-button {
+		border: none;
+		border-radius: 5px;
+		outline: none;
+		cursor: pointer;
+		background-color: $primary-blue;
+		color: $primary-white;
+		text-transform: uppercase;
+		padding: 5px 10px;
+		margin-left: 6px;
 	}
 }
 
