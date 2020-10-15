@@ -209,6 +209,19 @@ body {
 	}
 }
 
+.active-profile {
+	color: $primary-white;
+	background: $primary-blue;
+
+	&:hover{
+		background: $primary-blue;
+	}
+
+	.profile__last-message {
+		color: $primary-white;
+	}
+}
+
 @media only screen and (max-width: $layout-tablet-width) {
 	.chat-list {
 		min-width: $chat-list-tablet-width;
