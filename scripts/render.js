@@ -38,33 +38,45 @@ function setHeaderProfile(avatar, name, about) {
   setBackgroundImage(profileAvatarId, avatar)
 }
 
-function setMessages(messages, avatar) {
+function setMessages(messages, avatar, userProfile) {
   const messageListWrapper = document.getElementById(messageListsId)
   removeChildElement(messageListsId)
 
-  const messageElement = document.createElement('li')
-  messageElement.classList.add('chat-page__message')
-
-  const AvatarElement = document.createElement('span')
-  AvatarElement.classList.add('profile__avatar', 'profile__avatar--small')
-  AvatarElement.style.backgroundImage = `url('${avatar}')`
-
-  const chatTextsWrapper = document.createElement('div')
-  chatTextsWrapper.classList.add('chat-page__texts')
-
   messages.forEach((messageItem) => {
+    let avatarImage = ''
+
+    const messageElement = document.createElement('li')
+    messageElement.classList.add('chat-page__message')
+
+    const AvatarElement = document.createElement('span')
+    const chatTextsWrapper = document.createElement('div')
     const chatText = document.createElement('span')
+
+    chatTextsWrapper.classList.add('chat-page__texts')
     chatText.classList.add('chat-page__text')
+
+    if (messageItem.isFromFriend) {
+      avatarImage = userProfile.avatar
+      chatText.classList.add('chat-page__text--freind')
+      chatTextsWrapper.classList.add('chat-page__texts--freind')
+    } else {
+      avatarImage = avatar
+    }
+
+    AvatarElement.style.backgroundImage = `url('${avatarImage}')`
+    AvatarElement.classList.add('profile__avatar', 'profile__avatar--small')
+
     chatText.innerText = messageItem.message
     chatTextsWrapper.appendChild(chatText)
+
+    messageElement.appendChild(AvatarElement)
+    messageElement.appendChild(chatTextsWrapper)
+    messageListWrapper.appendChild(messageElement)
   })
-  messageElement.appendChild(AvatarElement)
-  messageElement.appendChild(chatTextsWrapper)
-  messageListWrapper.appendChild(messageElement)
 }
 
 export function renderChatList(chatData) {
-  const { chatList } = chatData
+  const { chatList, userProfile } = chatData
 
   chatList.forEach((chat) => {
     const { avatar, name, chats, about } = chat
@@ -98,7 +110,7 @@ export function renderChatList(chatData) {
     chatItem.addEventListener('click', () => {
       handleActiveChatPage(chatItem)
       setHeaderProfile(avatar, name, about)
-      setMessages(chats, avatar)
+      setMessages(chats, avatar, userProfile)
     })
 
     chatListWrapper.appendChild(chatItem)
