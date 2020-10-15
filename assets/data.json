@@ -291,5 +291,13 @@
 				"message": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
 			}]
         }
-    ]
+	],
+	"userProfile":{
+		"id": 555,
+		"name": "Ali Taee",
+		"userName": "alitaeejs",
+		"avatar": "./user-profile/ali-taee.jpg",
+		"about": "Front-end Developer"
+	},
+	"contacts": []
 }
