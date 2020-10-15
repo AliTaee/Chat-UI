@@ -169,7 +169,7 @@ body {
 
 	&__text {
 	background: $primary-blue;
-	white-space: break-spaces;
+	white-space: pre-line;
     border-radius: 5px;
     padding: 5px;
     min-height: 30px;
