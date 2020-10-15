@@ -16,6 +16,11 @@
 				"message": "Hi, I'm fine how about you?"
 			},
 			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "what are you doing?"
+			},
+			{
 				"isFromFriend": true,
 				"date": null,
 				"message": "I'm good thanks."
