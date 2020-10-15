@@ -114,6 +114,11 @@ body {
 		margin: 10px;
 	}
 
+	&__main {
+		overflow: auto;
+    	height: calc(100vh - 70px);
+	}
+
 	&__messages {
 		margin-bottom: 10px;
 	}
