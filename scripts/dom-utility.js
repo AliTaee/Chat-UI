@@ -26,3 +26,8 @@ export function setBackgroundImage(idName, value) {
 export function removeChildElement(idName) {
   document.getElementById(idName).innerHTML = null
 }
+
+export function autoHeight(element) {
+  element.style.height = '1px'
+  element.style.height = element.scrollHeight + 'px'
+}

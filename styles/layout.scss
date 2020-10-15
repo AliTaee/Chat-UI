@@ -197,7 +197,10 @@ body {
 	&__input-area {
 		border: none;
 		outline: none;
+		resize: none;
 		max-height: 250px;
+		min-height: 23px;
+		height: 23px;
 		overflow-y: auto;
 		flex-grow: 2;
 	}

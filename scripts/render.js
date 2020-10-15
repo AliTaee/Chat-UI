@@ -8,6 +8,8 @@ import {
   removeClassFromAllDocument,
 } from './dom-utility'
 
+import { setState } from '../index'
+
 // Chat page main Id and class namess
 const chatPageId = 'chat-page'
 const chatSectionId = 'chat-section'
@@ -111,8 +113,13 @@ export function renderChatList(chatData) {
       handleActiveChatPage(chatItem)
       setHeaderProfile(avatar, name, about)
       setMessages(chats, avatar, userProfile)
+      setState('activeChat', chat)
     })
 
     chatListWrapper.appendChild(chatItem)
   })
+}
+
+export function renderNewMessage(message) {
+  console.info('new message', message)
 }
