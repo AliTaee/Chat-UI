@@ -1,22 +1,47 @@
-function removeClassFromAllDocument(className) {
-  let classElements = document.getElementsByClassName(className)
-  while (classElements.length) classElements[0].classList.remove(className)
+import {
+  addInnerText,
+  setStyleToElement,
+  setBackgroundImage,
+  removeClassFromElement,
+  removeStyleFromElement,
+  removeClassFromAllDocument,
+} from './dom-utility'
+
+// Chat page main Id and class namess
+const chatPage = 'chat-page'
+const chatSectionId = 'chat-section'
+const activeClassName = 'active-profile'
+const startMessaging = 'start-messaging'
+const chatListWrapper = document.getElementById('chat-list')
+
+// Chat section main Id and class names
+// profile
+const profileName = 'profile-name'
+const profileAbout = 'profile-about'
+const profileAvatar = 'profile-avatar'
+
+function handleActiveChatPage(chatItem) {
+  removeClassFromAllDocument(activeClassName)
+  chatItem.classList.add(activeClassName)
+  removeStyleFromElement(chatSectionId, 'display')
+  removeClassFromElement(chatPage, 'center-layout')
+  setStyleToElement(startMessaging, 'display', 'none')
 }
 
-export function renderChatList(chatList) {
-  const chatListWrapper = document.getElementById('chat-list')
-  const activeClassName = 'active-profile'
+function setHeaderProfile(avatar, name, about) {
+  addInnerText(profileName, name)
+  addInnerText(profileAbout, about)
+  setBackgroundImage(profileAvatar, avatar)
+}
 
-  chatList.forEach((chat) => {
-    const { avatar, name, chats } = chat
+export function renderChatList(chatData) {
+  const { list } = chatData
+
+  list.forEach((chat) => {
+    const { avatar, name, chats, about } = chat
 
     let chatItem = document.createElement('li')
     chatItem.classList.add('chat-listــitem', 'profile', 'profile-area-padding')
-
-    chatItem.addEventListener('click', () => {
-      removeClassFromAllDocument(activeClassName)
-      chatItem.classList.add(activeClassName)
-    })
 
     let avatarElement = document.createElement('span')
     avatarElement.classList.add('profile__avatar')
@@ -40,6 +65,11 @@ export function renderChatList(chatList) {
 
     chatItem.appendChild(avatarElement)
     chatItem.appendChild(infoWrapper)
+
+    chatItem.addEventListener('click', () => {
+      handleActiveChatPage(chatItem)
+      setHeaderProfile(avatar, name, about)
+    })
 
     chatListWrapper.appendChild(chatItem)
   })
