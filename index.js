@@ -48,7 +48,7 @@ SendButtonElement.addEventListener('click', () => {
   messageInputElement.value = ''
   messageInputElement.style.height = '23px'
 
-  renderNewMessage(newMessageText, newChatLists)
+  renderNewMessage(newMessageText, chatData.userProfile)
   console.info('chatData', chatData)
 })
 

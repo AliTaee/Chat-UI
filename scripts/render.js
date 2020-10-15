@@ -25,6 +25,7 @@ const profileAvatarId = 'profile-avatar'
 
 // Chat messages
 const messageListsId = 'message-lists'
+const messageListWrapper = document.getElementById(messageListsId)
 
 function handleActiveChatPage(chatItem) {
   removeClassFromAllDocument(activeClassName)
@@ -41,7 +42,6 @@ function setHeaderProfile(avatar, name, about) {
 }
 
 function setMessages(messages, avatar, userProfile) {
-  const messageListWrapper = document.getElementById(messageListsId)
   removeChildElement(messageListsId)
 
   messages.forEach((messageItem) => {
@@ -120,13 +120,24 @@ export function renderChatList(chatData) {
   })
 }
 
-export function renderNewMessage(message, newChatLists) {
-  console.info('new message', message)
-  console.info('newChatLists', newChatLists)
-  // const messageElement = document.createElement('li')
-  //   messageElement.classList.add('chat-page__message')
+export function renderNewMessage(message, userProfile) {
+  const messageElement = document.createElement('li')
+  messageElement.classList.add('chat-page__message')
 
-  //   const AvatarElement = document.createElement('span')
-  //   const chatTextsWrapper = document.createElement('div')
-  //   const chatText = document.createElement('span')
+  const AvatarElement = document.createElement('span')
+  const chatTextsWrapper = document.createElement('div')
+  const chatText = document.createElement('span')
+
+  chatTextsWrapper.classList.add('chat-page__texts')
+  chatText.classList.add('chat-page__text')
+
+  AvatarElement.style.backgroundImage = `url('${userProfile.avatar}')`
+  AvatarElement.classList.add('profile__avatar', 'profile__avatar--small')
+
+  chatText.innerText = message
+  chatTextsWrapper.appendChild(chatText)
+
+  messageElement.appendChild(AvatarElement)
+  messageElement.appendChild(chatTextsWrapper)
+  messageListWrapper.appendChild(messageElement)
 }
