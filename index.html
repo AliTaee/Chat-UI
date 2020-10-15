@@ -22,15 +22,51 @@
         <header class="profile profile-area-padding profile--background-light">
             <span
               class="profile__avatar"
-              style="background-image: url('/assets/user-profile/ali-taee.jpg')"
+              style="background-image: url('/assets/user-profile/android.png')"
             ></span>
             <div class="profile__info">
-              <span class="profile__name">Ali Taee</span>
+              <span class="profile__name">Android</span>
               <span class="profile__about"
-                >Front-end Developer</span
+                >Android is Cool</span
               >
             </div>
         </header>
+        <div class="chat-page__main">
+          <ol class="chat-page__messages">
+            <li class="chat-page__message">
+              <span
+              class="profile__avatar profile__avatar--small"
+              style="background-image: url('/assets/user-profile/ali-taee.jpg')">
+              </span>
+              <div class="chat-page__texts">
+                <span class="chat-page__text">Hello</span>
+              </div>
+            </li>
+            <li class="chat-page__message">
+              <span
+              class="profile__avatar profile__avatar--small"
+              style="background-image: url('/assets/user-profile/android.png')">
+              </span>
+              <div class="chat-page__texts chat-page__texts--freind">
+                <span class="chat-page__text chat-page__text--freind">Hello</span>
+                <span class="chat-page__text chat-page__text--freind">How are you?</span>
+              </div>
+            </li>
+            <li class="chat-page__message">
+              <span
+              class="profile__avatar profile__avatar--small"
+              style="background-image: url('/assets/user-profile/ali-taee.jpg')">
+              </span>
+              <div class="chat-page__texts">
+                <span class="chat-page__text">I'm Fine, How about you?</span>
+                <span class="chat-page__text">Do you have any update?</span>
+              </div>
+            </li>
+          </ol>
+          <div class="chat-page__send-message">
+            <div contenteditable="true" class="chat-page__input-area" id="message-input">write a message</div>
+          </div>
+        </div>
       </section>
     </main>
     <script src="./index.js"></script>
