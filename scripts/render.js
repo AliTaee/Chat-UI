@@ -167,7 +167,11 @@ export function renderNewMessage(message, userProfile) {
   chatText.innerText = message
   chatTextsWrapper.appendChild(chatText)
 
+  const replySvgIcon = createReplySvgIcon()
+  replySvgIcon.classList.add('delay-reply')
+
   messageElement.appendChild(AvatarElement)
   messageElement.appendChild(chatTextsWrapper)
+  messageElement.appendChild(replySvgIcon)
   messageListWrapper.appendChild(messageElement)
 }
