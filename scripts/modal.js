@@ -24,13 +24,15 @@ export function modalFunc() {
     renderContacts(contacts)
   }
 
-  modalClose.onclick = function () {
+  function closeModal() {
     modal.style.display = 'none'
   }
 
+  modalClose.onclick = closeModal
+
   window.onclick = function (event) {
     if (event.target == modal) {
-      modal.style.display = 'none'
+      closeModal()
     }
   }
 }
