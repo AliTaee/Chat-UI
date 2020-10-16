@@ -8,7 +8,7 @@ import {
   removeStyleFromElement,
   removeClassFromAllDocument,
 } from './dom-utility'
-
+import { closeModal } from './modal'
 import { setState, getState } from '../index'
 
 // Chat page main Id and class namess
@@ -33,6 +33,13 @@ const messageListWrapper = document.getElementById(messageListsId)
 // Modal
 const modalContentId = 'modal-content'
 const modalContent = document.getElementById(modalContentId)
+
+// Contact
+const contactInfoWrapperId = 'contact-info'
+const contactInfoNameId = 'contact-info-name'
+const contactInfoAboutId = 'contact-info-about'
+const contactInfoButtonId = 'contact-info-button'
+const contactInfoAvatarId = 'contact-info-avatar'
 
 function handleActiveChatPage(chatItem) {
   removeClassFromAllDocument(activeClassName)
@@ -124,6 +131,8 @@ export function renderChatList() {
     chatItem.appendChild(infoWrapper)
 
     chatItem.addEventListener('click', () => {
+      setStyleToElement(chatPageId, 'display', 'block')
+      setStyleToElement(contactInfoWrapperId, 'display', 'none')
       handleActiveChatPage(chatItem)
       setHeaderProfile(avatar, name, about)
       setMessages(id, avatar, userProfile)
@@ -192,9 +201,32 @@ export function renderModalHeaderProfile() {
   })
 }
 
-export function renderContacts(contacts) {
-  console.info(contacts)
+function renderContaceInfo(userContact) {
+  const { name, about, avatar } = userContact
+  closeModal()
+  setStyleToElement(chatPageId, 'display', 'none')
 
+  addInnerText(contactInfoNameId, name)
+  addInnerText(contactInfoAboutId, about)
+  setBackgroundImage(contactInfoAvatarId, avatar)
+
+  removeClassFromAllDocument(activeClassName)
+  setStyleToElement(contactInfoWrapperId, 'display', 'flex')
+  setState('activeChat', userContact)
+}
+
+document.getElementById(contactInfoButtonId).addEventListener('click', () => {
+  const activeChat = getState('activeChat')
+  const userProfile = getState('userProfile')
+  const { avatar, name, about, id } = activeChat
+
+  setMessages(id, avatar, userProfile)
+  setHeaderProfile(avatar, name, about)
+  setStyleToElement(chatPageId, 'display', 'block')
+  setStyleToElement(contactInfoWrapperId, 'display', 'none')
+})
+
+export function renderContacts(contacts) {
   let contactsListElement = document.createElement('ol')
   contactsListElement.classList.add('contacts-list', 'custom-scroll')
 
@@ -226,7 +258,7 @@ export function renderContacts(contacts) {
     chatItem.appendChild(infoWrapper)
 
     chatItem.addEventListener('click', () => {
-      console.info('You clicked on contacs')
+      renderContaceInfo(chat)
     })
     contactsListElement.appendChild(chatItem)
   })

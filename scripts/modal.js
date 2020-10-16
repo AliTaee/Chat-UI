@@ -7,6 +7,10 @@ const modalContent = document.getElementById('modal-content')
 const modalClose = document.getElementById('modal-close')
 const modal = document.getElementById('modal')
 
+export function closeModal() {
+  modal.style.display = 'none'
+}
+
 export function modalFunc() {
   function openModal() {
     modalContent.innerHTML = null
@@ -22,10 +26,6 @@ export function modalFunc() {
     openModal()
     const contacts = getState('contacts')
     renderContacts(contacts)
-  }
-
-  function closeModal() {
-    modal.style.display = 'none'
   }
 
   modalClose.onclick = closeModal

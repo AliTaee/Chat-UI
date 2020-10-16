@@ -60,6 +60,28 @@ body {
     overflow: auto;
 }
 
+.main-section {
+	background: $primary-dark;
+	height: 100%;
+	width: 65%;
+}
+
+.contact-info {
+	@extend .main-section;
+
+	.profile {
+		flex-direction: column;
+
+		&__header {
+			cursor: default;
+		}
+	}
+
+	.contacts-button {
+		margin-top: 12px;
+	}
+}
+
 .chat-list {
 	background: $primary-main;
 	height: 100%;
@@ -145,9 +167,7 @@ body {
 }
 
 .chat-page {
-	background: $primary-dark;
-	height: 100%;
-	width: 65%;
+	@extend .main-section;
 
 	&__start-messaging {
 		background-color: $primary-light;
