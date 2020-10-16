@@ -90,6 +90,7 @@ body {
 		flex-direction: column;
 		margin-left: 10px;
 		height: $profile-avatar;
+		max-width: calc(100% - 70px);
 		justify-content: space-evenly;
 	}
 
