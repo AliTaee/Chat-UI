@@ -1,5 +1,6 @@
 import {
   addInnerText,
+  scrollToElement,
   setStyleToElement,
   setBackgroundImage,
   removeChildElement,
@@ -95,6 +96,8 @@ function setMessages(id, avatar, userProfile) {
     messageElement.appendChild(replySvgIcon)
     messageListWrapper.appendChild(messageElement)
   })
+
+  scrollToElement('message-lists')
 }
 
 export function renderChatList() {
