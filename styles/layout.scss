@@ -140,7 +140,8 @@ body {
 	}
 
 	&__messages {
-		margin-bottom: 10px;
+		overflow: auto;
+		margin: 5px 0;
 	}
 
 	&__message {
