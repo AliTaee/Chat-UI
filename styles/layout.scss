@@ -30,6 +30,8 @@ body {
 .telegram {
 	max-width: $layout-desktop-width;
 	background: $primary-light;
+	position: relative;
+	z-index: 1;
 	margin: 0 auto;
 	height: 100%;
 	display: flex;
