@@ -1,12 +1,13 @@
 'use strict'
 import { modalFunc } from './scripts/modal'
 import { autoHeight, scrollToElement } from './scripts/dom-utility'
-import { readDataFromJson } from './scripts/fetch-data'
 import {
   renderChatList,
   renderNewMessage,
   renderModalHeaderProfile,
 } from './scripts/render'
+
+import dataJson from './assets/data.json'
 
 let chatData = {
   contacts: [],
@@ -24,20 +25,6 @@ export function setState(propertyKey, value) {
 export const getState = (propertyKey) => {
   return chatData[propertyKey]
 }
-
-function afterFetchData() {
-  renderChatList()
-  modalFunc()
-  renderModalHeaderProfile()
-}
-
-readDataFromJson
-  .then((result) => {
-    const { contacts, userProfile } = result
-    chatData = { ...chatData, contacts, userProfile }
-    afterFetchData()
-  })
-  .catch((error) => console.error(error))
 
 SendButtonElement.addEventListener('click', () => {
   const newMessageText = messageInputElement.value
@@ -71,3 +58,17 @@ SendButtonElement.addEventListener('click', () => {
 messageInputElement.addEventListener('input', () => {
   autoHeight(messageInputElement)
 })
+
+function afterFetchData() {
+  renderChatList()
+  modalFunc()
+  renderModalHeaderProfile()
+}
+
+function readDataFromJson() {
+  const { contacts, userProfile } = dataJson
+  chatData = { ...chatData, contacts, userProfile }
+  afterFetchData()
+}
+
+readDataFromJson()
