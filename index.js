@@ -9,7 +9,6 @@ import {
 } from './scripts/render'
 
 let chatData = {
-  chatList: [],
   contacts: [],
   activeChat: {},
   userProfile: {},
@@ -34,8 +33,8 @@ function afterFetchData() {
 
 readDataFromJson
   .then((result) => {
-    const { chatList, contacts, userProfile } = result
-    chatData = { ...chatData, chatList, contacts, userProfile }
+    const { contacts, userProfile } = result
+    chatData = { ...chatData, contacts, userProfile }
     afterFetchData()
   })
   .catch((error) => console.error(error))
@@ -45,8 +44,8 @@ SendButtonElement.addEventListener('click', () => {
 
   if (newMessageText === '') return
 
-  const { chatList, activeChat } = chatData
-  const newChatLists = chatList.map((chat) => {
+  const { contacts, activeChat } = chatData
+  const newChatLists = contacts.map((chat) => {
     if (chat.id === activeChat.id) {
       return {
         ...chat,
@@ -59,7 +58,7 @@ SendButtonElement.addEventListener('click', () => {
     return chat
   })
 
-  chatData.chatList = newChatLists
+  chatData.contacts = newChatLists
   messageInputElement.value = ''
   messageInputElement.style.height = '23px'
 

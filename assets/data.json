@@ -1,5 +1,5 @@
 {
-    "chatList": [{
+    "contacts": [{
 			"id": 0,
 			"name": "Android",
 			"userName": "android",
@@ -319,6 +319,5 @@
 		"userName": "alitaeejs",
 		"avatar": "./user-profile/ali-taee.jpg",
 		"about": "Front-end Developer"
-	},
-	"contacts": []
+	}
 }

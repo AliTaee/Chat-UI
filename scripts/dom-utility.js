@@ -49,7 +49,6 @@ export const createReplySvgIcon = () => {
   )
   replyIcon.setAttribute('fill', '#fefefe')
 
-  // attach it to the container
   svgElement.appendChild(replyIcon)
 
   return svgElement

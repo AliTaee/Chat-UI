@@ -47,8 +47,8 @@ function setHeaderProfile(avatar, name, about) {
 }
 
 function setMessages(id, avatar, userProfile) {
-  const chatList = getState('chatList')
-  const getLastMessages = chatList.filter((chat) => chat.id === id)[0].chats
+  const contacts = getState('contacts')
+  const getLastMessages = contacts.filter((chat) => chat.id === id)[0].chats
 
   removeChildElement(messageListsId)
 
@@ -89,10 +89,10 @@ function setMessages(id, avatar, userProfile) {
 }
 
 export function renderChatList() {
-  const chatList = getState('chatList')
+  const contacts = getState('contacts')
   const userProfile = getState('userProfile')
 
-  chatList.forEach((chat) => {
+  contacts.forEach((chat) => {
     const { avatar, name, chats, about, id } = chat
 
     let chatItem = document.createElement('li')
