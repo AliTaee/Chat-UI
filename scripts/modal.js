@@ -13,8 +13,12 @@ export function modalFunc() {
     modal.style.display = 'block'
   }
 
-  profileHeader.onclick = openModal
+  profileHeader.onclick = () => {
+    modalContent.classList.remove('contacts-wrapper')
+    openModal()
+  }
   contactsButton.onclick = () => {
+    modalContent.classList.add('contacts-wrapper')
     openModal()
     const contacts = getState('contacts')
     renderContacts(contacts)
