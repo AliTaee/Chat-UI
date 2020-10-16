@@ -162,9 +162,10 @@ body {
 
 	&__texts {
 		display: flex;
+		position: relative;
 		flex-direction: column;
 		align-items: flex-start;
-		position: relative;
+		max-width: calc(100% - 70px);
 
 		&:last-child::after {
 			background-color: $primary-blue;
