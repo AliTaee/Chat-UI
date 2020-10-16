@@ -1,3 +1,6 @@
+import { renderContacts } from './render'
+import { getState } from '../index'
+
 const contactsButton = document.getElementById('contacts-button')
 const profileHeader = document.getElementById('profile-header')
 const modalContent = document.getElementById('modal-content')
@@ -11,7 +14,11 @@ export function modalFunc() {
   }
 
   profileHeader.onclick = openModal
-  contactsButton.onclick = openModal
+  contactsButton.onclick = () => {
+    openModal()
+    const contacts = getState('contacts')
+    renderContacts(contacts)
+  }
 
   modalClose.onclick = function () {
     modal.style.display = 'none'

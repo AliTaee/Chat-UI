@@ -32,6 +32,7 @@ const messageListWrapper = document.getElementById(messageListsId)
 
 // Modal
 const modalContentId = 'modal-content'
+const modalContent = document.getElementById(modalContentId)
 
 function handleActiveChatPage(chatItem) {
   removeClassFromAllDocument(activeClassName)
@@ -162,7 +163,6 @@ export function renderNewMessage(message, userProfile) {
 
 export function renderModalHeaderProfile() {
   const headerProfile = document.getElementById(profileHeaderId)
-  const modalContent = document.getElementById(modalContentId)
 
   headerProfile.addEventListener('click', () => {
     const activeUserChat = getState('activeChat')
@@ -190,4 +190,45 @@ export function renderModalHeaderProfile() {
     profileWrapper.appendChild(userTellElement)
     modalContent.appendChild(profileWrapper)
   })
+}
+
+export function renderContacts(contacts) {
+  console.info(contacts)
+
+  let contactsListElement = document.createElement('ol')
+  contactsListElement.classList.add('contacts-list', 'custom-scroll')
+
+  contacts.forEach((chat) => {
+    const { avatar, name, about } = chat
+
+    let chatItem = document.createElement('li')
+    chatItem.classList.add('chat-listــitem', 'profile', 'profile-area-padding')
+
+    let avatarElement = document.createElement('span')
+    avatarElement.classList.add('profile__avatar')
+    avatarElement.style.backgroundImage = `url('${avatar}')`
+
+    let infoWrapper = document.createElement('div')
+    infoWrapper.classList.add('profile__info')
+
+    let profileName = document.createElement('span')
+    profileName.classList.add('profile__name')
+    profileName.innerText = name
+
+    let profileAbout = document.createElement('span')
+    profileAbout.classList.add('profile__last-message')
+    profileAbout.innerText = about
+
+    infoWrapper.appendChild(profileName)
+    infoWrapper.appendChild(profileAbout)
+
+    chatItem.appendChild(avatarElement)
+    chatItem.appendChild(infoWrapper)
+
+    chatItem.addEventListener('click', () => {
+      console.info('You clicked on contacs')
+    })
+    contactsListElement.appendChild(chatItem)
+  })
+  modalContent.appendChild(contactsListElement)
 }

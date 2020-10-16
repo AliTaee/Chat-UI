@@ -12,11 +12,13 @@
 	
 	&__wrapper {
 		background-color: lighten($primary-light, 5%);
-		margin: 15% auto;
+		position: absolute;
+		top: 50%;
+		right: 50%;
+  		transform: translate(50%,-50%);
 		border: 1px solid $primary-dark;
 		border-radius: 5px;
-		max-width: 30%;
-		position: relative;	
+		width: 30%;
 	}
 
 	&__content {
@@ -48,7 +50,7 @@
 @media only screen and (max-width: $layout-tablet-width + 100) {
 	.modal {
 		&__wrapper {
-			max-width: 50%;
+			width: 50%;
 		}
 	
 	}
@@ -57,7 +59,7 @@
 @media only screen and (max-width: $layout-tablet-small-width) {
 	.modal {
 		&__wrapper {
-			max-width: 70%;
+			width: 90%;
 		}
 	
 	}

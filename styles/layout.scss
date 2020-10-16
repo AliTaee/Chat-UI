@@ -55,6 +55,11 @@ body {
 	}
 }
 
+.contacts-list {
+    max-height: 400px;
+    overflow: auto;
+}
+
 .chat-list {
 	background: $primary-main;
 	height: 100%;
