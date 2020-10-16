@@ -17,6 +17,7 @@ const chatSectionId = 'chat-section'
 const activeClassName = 'active-profile'
 const startMessagingId = 'start-messaging'
 const chatListWrapper = document.getElementById('chat-list')
+const messageInputElement = document.getElementById('message-input')
 
 // Chat section main Id and class names
 // profile
@@ -126,6 +127,7 @@ export function renderChatList() {
       setHeaderProfile(avatar, name, about)
       setMessages(id, avatar, userProfile)
       setState('activeChat', chat)
+      messageInputElement.focus()
     })
 
     chatListWrapper.appendChild(chatItem)

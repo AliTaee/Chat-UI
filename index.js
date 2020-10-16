@@ -41,7 +41,7 @@ readDataFromJson
 
 SendButtonElement.addEventListener('click', () => {
   const newMessageText = messageInputElement.value
-
+  messageInputElement.focus()
   if (newMessageText === '') return
 
   const { contacts, activeChat } = chatData
