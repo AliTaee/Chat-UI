@@ -1,6 +1,6 @@
 'use strict'
 import { modalFunc } from './scripts/modal'
-import { autoHeight } from './scripts/dom-utility'
+import { autoHeight, scrollToElement } from './scripts/dom-utility'
 import { readDataFromJson } from './scripts/fetch-data'
 import {
   renderChatList,
@@ -63,6 +63,7 @@ SendButtonElement.addEventListener('click', () => {
   messageInputElement.style.height = '23px'
 
   renderNewMessage(newMessageText, chatData.userProfile)
+  scrollToElement('message-lists')
   // For test and development
   console.info('updated chat data', chatData)
 })

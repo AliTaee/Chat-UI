@@ -32,6 +32,11 @@ export function autoHeight(element) {
   element.style.height = element.scrollHeight + 'px'
 }
 
+export function scrollToElement(elementId) {
+  const element = document.getElementById(elementId)
+  element.scrollTop = element.scrollHeight
+}
+
 export const createReplySvgIcon = () => {
   const svgElement = document.createElementNS(
     'http://www.w3.org/2000/svg',
