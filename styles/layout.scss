@@ -37,6 +37,24 @@ body {
 	display: flex;
 }
 
+.contacts-button {
+	background-color: $primary-blue;
+	width: calc(100% - 10px);
+	cursor: pointer;
+	text-transform: capitalize;
+	color: $primary-white;
+	text-align: center;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 10px;
+
+	&:hover {
+		background-color: darken($primary-blue, 5%);
+	}
+}
+
 .chat-list {
 	background: $primary-main;
 	height: 100%;
