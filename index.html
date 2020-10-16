@@ -21,16 +21,18 @@
       <section id="chat-page" class="chat-page center-layout">
         <div id="chat-section" class="chat-section custom-scroll" style="display: none;">
           <header class="profile profile-area-padding profile--background-light">
-            <span
-              id="profile-avatar"
-              class="profile__avatar"
-            ></span>
-            <div class="profile__info">
-              <span id="profile-name" class="profile__name"></span>
-              <span id="profile-about" class="profile__about"
-                ></span
-              >
-            </div>
+            <div class="profile__header" id="profile-header">
+              <span
+                id="profile-avatar"
+                class="profile__avatar"
+              ></span>
+              <div class="profile__info">
+                <span id="profile-name" class="profile__name"></span>
+                <span id="profile-about" class="profile__about"
+                  ></span
+                >
+              </div>
+          </div>
           </header>
           <div class="chat-page__main">
             <ol id="message-lists" class="chat-page__messages">
@@ -55,6 +57,14 @@
         </p>
       </section>
     </main>
+    <div id="modal" class="modal">
+      <div class="modal__wrapper">
+        <span id="modal-close" class="modal__close">&times;</span>
+        <div class="modal__content center-layout">
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>

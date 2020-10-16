@@ -1,4 +1,5 @@
 'use strict'
+import { modalFunc } from './scripts/modal'
 import { autoHeight } from './scripts/dom-utility'
 import { readDataFromJson } from './scripts/fetch-data'
 import { renderChatList, renderNewMessage } from './scripts/render'
@@ -26,6 +27,7 @@ readDataFromJson
     const { chatList, contacts, userProfile } = result
     chatData = { ...chatData, chatList, contacts, userProfile }
     renderChatList()
+    modalFunc()
   })
   .catch((error) => console.error(error))
 
@@ -53,6 +55,7 @@ SendButtonElement.addEventListener('click', () => {
   messageInputElement.style.height = '23px'
 
   renderNewMessage(newMessageText, chatData.userProfile)
+  // For test and development
   console.info('updated chat data', chatData)
 })
 

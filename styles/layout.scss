@@ -58,9 +58,14 @@ body {
 .profile {
 	display: flex;
 	align-items: center;
-
 	&--background-light {
 		background-color: $primary-main;
+	}
+
+	&__header {
+		display: flex;
+		cursor: pointer;
+		align-items: center;
 	}
 
 	&__avatar {
