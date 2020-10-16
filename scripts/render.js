@@ -175,6 +175,7 @@ export function renderModalHeaderProfile() {
     avatarElement.classList.add('profile__avatar', 'center-img')
 
     const aboutElement = document.createElement('span')
+    aboutElement.classList.add('about-user-modal', 'custom-scroll')
     aboutElement.innerText = `About: ${activeUserChat.about}`
 
     const userNameElement = document.createElement('span')
