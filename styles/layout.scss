@@ -103,6 +103,12 @@ body {
 	}
 }
 
+.profile-about {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
 .chat-section {
 	display: flex;
 	flex-direction: column;

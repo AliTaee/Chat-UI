@@ -2,7 +2,11 @@
 import { modalFunc } from './scripts/modal'
 import { autoHeight } from './scripts/dom-utility'
 import { readDataFromJson } from './scripts/fetch-data'
-import { renderChatList, renderNewMessage } from './scripts/render'
+import {
+  renderChatList,
+  renderNewMessage,
+  renderModalHeaderProfile,
+} from './scripts/render'
 
 let chatData = {
   chatList: [],
@@ -22,12 +26,17 @@ export const getState = (propertyKey) => {
   return chatData[propertyKey]
 }
 
+function afterFetchData() {
+  renderChatList()
+  modalFunc()
+  renderModalHeaderProfile()
+}
+
 readDataFromJson
   .then((result) => {
     const { chatList, contacts, userProfile } = result
     chatData = { ...chatData, chatList, contacts, userProfile }
-    renderChatList()
-    modalFunc()
+    afterFetchData()
   })
   .catch((error) => console.error(error))
 

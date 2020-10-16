@@ -23,10 +23,14 @@ const chatListWrapper = document.getElementById('chat-list')
 const profileNameId = 'profile-name'
 const profileAboutId = 'profile-about'
 const profileAvatarId = 'profile-avatar'
+const profileHeaderId = 'profile-header'
 
 // Chat messages
 const messageListsId = 'message-lists'
 const messageListWrapper = document.getElementById(messageListsId)
+
+// Modal
+const modalContentId = 'modal-content'
 
 function handleActiveChatPage(chatItem) {
   removeClassFromAllDocument(activeClassName)
@@ -152,4 +156,36 @@ export function renderNewMessage(message, userProfile) {
   messageElement.appendChild(chatTextsWrapper)
   messageElement.appendChild(replySvgIcon)
   messageListWrapper.appendChild(messageElement)
+}
+
+export function renderModalHeaderProfile() {
+  const headerProfile = document.getElementById(profileHeaderId)
+  const modalContent = document.getElementById(modalContentId)
+
+  headerProfile.addEventListener('click', () => {
+    const activeUserChat = getState('activeChat')
+
+    let profileWrapper = document.createElement('div')
+    profileWrapper.classList.add('profile-about', 'profile')
+
+    const avatarElement = document.createElement('span')
+    avatarElement.style.backgroundImage = `url('${activeUserChat.avatar}')`
+    avatarElement.classList.add('profile__avatar', 'center-img')
+
+    const aboutElement = document.createElement('span')
+    aboutElement.innerText = `About: ${activeUserChat.about}`
+
+    const userNameElement = document.createElement('span')
+    userNameElement.innerText = `User name: ${activeUserChat.userName}`
+
+    const userTellElement = document.createElement('span')
+    userTellElement.innerText = `Tell: ${activeUserChat.tell}`
+
+    profileWrapper.appendChild(avatarElement)
+    profileWrapper.appendChild(aboutElement)
+    profileWrapper.appendChild(userNameElement)
+    profileWrapper.appendChild(userTellElement)
+    modalContent.innerHTML = null
+    modalContent.appendChild(profileWrapper)
+  })
 }

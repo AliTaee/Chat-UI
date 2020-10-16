@@ -4,6 +4,11 @@
 	justify-content: center;
 }
 
+.center-img {
+	display: block;
+	margin: 0 auto;
+}
+
 .custom-scroll {
 	&::-webkit-scrollbar {
 		width: 8px;
