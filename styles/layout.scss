@@ -304,6 +304,12 @@ body {
 }
 
 @media only screen and (max-width: $layout-tablet-width) {
+	
+	.contact-info {
+		height: 100vh;
+		width: 100%;
+	}
+
 	.chat-list {
 		min-width: $chat-list-tablet-width;
 	}
