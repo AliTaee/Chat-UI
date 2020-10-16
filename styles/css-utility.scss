@@ -9,6 +9,12 @@
 	margin: 0 auto;
 }
 
+.svg-icon {
+	fill: $primary-white;
+	width: 24px;
+	height: 24px;
+}
+
 .custom-scroll {
 	&::-webkit-scrollbar {
 		width: 8px;

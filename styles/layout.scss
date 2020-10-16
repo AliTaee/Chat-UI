@@ -43,12 +43,15 @@ body {
 	cursor: pointer;
 	text-transform: capitalize;
 	color: $primary-white;
-	text-align: center;
 	border: none;
 	outline: none;
 	border-radius: 5px;
 	margin: 5px;
 	padding: 10px;
+
+	& .svg-icon {
+		margin-right: 6px;
+	}
 
 	&:hover {
 		background-color: darken($primary-blue, 5%);
