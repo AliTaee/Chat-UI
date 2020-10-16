@@ -1,11 +1,17 @@
+const contactsButton = document.getElementById('contacts-button')
 const profileHeader = document.getElementById('profile-header')
+const modalContent = document.getElementById('modal-content')
 const modalClose = document.getElementById('modal-close')
 const modal = document.getElementById('modal')
 
 export function modalFunc() {
-  profileHeader.onclick = function () {
+  function openModal() {
+    modalContent.innerHTML = null
     modal.style.display = 'block'
   }
+
+  profileHeader.onclick = openModal
+  contactsButton.onclick = openModal
 
   modalClose.onclick = function () {
     modal.style.display = 'none'

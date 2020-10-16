@@ -188,7 +188,6 @@ export function renderModalHeaderProfile() {
     profileWrapper.appendChild(aboutElement)
     profileWrapper.appendChild(userNameElement)
     profileWrapper.appendChild(userTellElement)
-    modalContent.innerHTML = null
     modalContent.appendChild(profileWrapper)
   })
 }
