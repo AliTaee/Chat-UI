@@ -51,8 +51,6 @@ SendButtonElement.addEventListener('click', () => {
 
   renderNewMessage(newMessageText, chatData.userProfile)
   scrollToElement('message-lists')
-  // For test and development
-  console.info('updated chat data', chatData)
 })
 
 messageInputElement.addEventListener('input', () => {
