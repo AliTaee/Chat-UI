@@ -192,7 +192,7 @@ body {
 		align-items: flex-start;
 		max-width: calc(100% - 70px);
 
-		&:last-child::after {
+		&::after {
 			background-color: $primary-blue;
 			content: "";
 			width: 8px;
@@ -202,7 +202,7 @@ body {
 			left: -4px;
 		}
 
-		&:last-child::before {
+		&::before {
 			background-color: $primary-dark;
 			content: "";
 			width: 6px;
@@ -214,7 +214,7 @@ body {
 			border-radius: 0 0 30PX 0;
 		}
 
-		&--freind:last-child::after {
+		&--freind::after {
 			background-color: $primary-light;
 		}
 	}	
