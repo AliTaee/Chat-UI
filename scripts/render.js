@@ -208,6 +208,8 @@ function renderContaceInfo(userContact) {
   const { name, about, avatar } = userContact
   closeModal()
   setStyleToElement(chatPageId, 'display', 'none')
+  setStyleToElement(startMessagingId, 'display', 'none')
+  setStyleToElement(chatSectionId, 'display', 'block')
 
   addInnerText(contactInfoNameId, name)
   addInnerText(contactInfoAboutId, about)

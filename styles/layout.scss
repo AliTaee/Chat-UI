@@ -326,7 +326,6 @@ body {
 
 	.chat-page {
 		width: 100%;
-		min-height: 450px;
 	}
 
 	.profile {
@@ -343,9 +342,21 @@ body {
 		height: auto;
 	}
 
+	.chat-page {
+		height: calc(100vh - 54px);
+
+		&__main {
+			height: calc(100vh - 120px);
+		}
+	}
+
 	.chat-list {
 		width: 100%;
 		min-width: 100%;
+
+		&ــitems {
+			display: none;
+		}
 	}
 
 	.profile {
