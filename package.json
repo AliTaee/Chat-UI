@@ -1,7 +1,7 @@
 {
-  "name": "digikala-challenge",
+  "name": "telegram-chat",
   "version": "1.0.0",
-  "description": "Front-end digikala challenge",
+  "description": "Front-end telegram chat",
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
