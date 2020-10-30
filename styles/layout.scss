@@ -292,11 +292,15 @@ body {
     text-transform: capitalize;
     padding: 5px 10px;
     margin-left: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     & .svg-icon {
       transform: rotate(90deg);
       width: 16px;
       height: 16px;
+      margin-left: 6px;
     }
   }
 }
