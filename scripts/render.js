@@ -1,12 +1,6 @@
 import {
-  addInnerText,
   scrollToElement,
-  setStyleToElement,
-  setBackgroundImage,
-  removeChildElement,
   createReplySvgIcon,
-  removeClassFromElement,
-  removeStyleFromElement,
   removeClassFromAllDocument,
 } from './dom-utility'
 import { closeModal } from './modal'
@@ -45,22 +39,24 @@ const contactInfoAvatarId = 'contact-info-avatar'
 function handleActiveChatPage(chatItem) {
   removeClassFromAllDocument(activeClassName)
   chatItem.classList.add(activeClassName)
-  removeStyleFromElement(chatSectionId, 'display')
-  removeClassFromElement(chatPageId, 'center-layout')
-  setStyleToElement(startMessagingId, 'display', 'none')
+  document.getElementById(chatSectionId).style['display'] = null
+  document.getElementById(chatPageId).classList.remove('center-layout')
+  document.getElementById(startMessagingId).style['display'] = 'none'
 }
 
 function setHeaderProfile(avatar, name, about) {
-  addInnerText(profileNameId, name)
-  addInnerText(profileAboutId, about)
-  setBackgroundImage(profileAvatarId, avatar)
+  document.getElementById(profileNameId).innerText = name
+  document.getElementById(profileAboutId).innerText = about
+  document.getElementById(
+    profileAvatarId
+  ).style.backgroundImage = `url(${avatar})`
 }
 
 function setMessages(id, avatar, userProfile) {
   const contacts = getState('contacts')
   const getLastMessages = contacts.filter((chat) => chat.id === id)[0].chats
 
-  removeChildElement(messageListsId)
+  document.getElementById(messageListsId).innerHTML = null
 
   getLastMessages.forEach((messageItem) => {
     let avatarImage = ''
@@ -134,8 +130,8 @@ export function renderChatList() {
     chatItem.appendChild(infoWrapper)
 
     chatItem.addEventListener('click', () => {
-      setStyleToElement(chatPageId, 'display', 'block')
-      setStyleToElement(contactInfoWrapperId, 'display', 'none')
+      document.getElementById(chatPageId).style['display'] = 'block'
+      document.getElementById(contactInfoWrapperId).style['display'] = 'none'
       handleActiveChatPage(chatItem)
       setHeaderProfile(avatar, name, about)
       setMessages(id, avatar, userProfile)
@@ -207,16 +203,18 @@ export function renderModalHeaderProfile() {
 function renderContaceInfo(userContact) {
   const { name, about, avatar } = userContact
   closeModal()
-  setStyleToElement(chatPageId, 'display', 'none')
-  setStyleToElement(startMessagingId, 'display', 'none')
-  setStyleToElement(chatSectionId, 'display', 'block')
+  document.getElementById(chatPageId).style['display'] = 'none'
+  document.getElementById(startMessagingId).style['display'] = 'none'
+  document.getElementById(chatSectionId).style['display'] = 'block'
 
-  addInnerText(contactInfoNameId, name)
-  addInnerText(contactInfoAboutId, about)
-  setBackgroundImage(contactInfoAvatarId, avatar)
+  document.getElementById(contactInfoNameId).innerText = name
+  document.getElementById(contactInfoAboutId).innerText = about
+  document.getElementById(
+    contactInfoAvatarId
+  ).style.backgroundImage = `url(${avatar})`
 
   removeClassFromAllDocument(activeClassName)
-  setStyleToElement(contactInfoWrapperId, 'display', 'flex')
+  document.getElementById(contactInfoWrapperId).style['display'] = 'flex'
   setState('activeChat', userContact)
 }
 
@@ -227,8 +225,8 @@ document.getElementById(contactInfoButtonId).addEventListener('click', () => {
 
   setMessages(id, avatar, userProfile)
   setHeaderProfile(avatar, name, about)
-  setStyleToElement(chatPageId, 'display', 'block')
-  setStyleToElement(contactInfoWrapperId, 'display', 'none')
+  document.getElementById(chatPageId).style['display'] = 'block'
+  document.getElementById(contactInfoWrapperId).style['display'] = 'none'
 })
 
 export function renderContacts(contacts) {
