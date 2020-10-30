@@ -38,6 +38,16 @@ body {
   display: flex;
 }
 
+.svg-icon {
+  fill: $primary-white;
+  width: 24px;
+  height: 24px;
+}
+
+.profile-area-padding {
+  padding: 7px 5px 7px 10px;
+}
+
 .contacts-button {
   background-color: $primary-blue;
   width: calc(100% - 10px);
