@@ -1,3 +1,24 @@
+.button {
+  background-color: $primary-blue;
+  color: $primary-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+  & .svg-icon {
+    margin-left: 6px;
+  }
+
+  &:hover {
+    background-color: $primary-blue-darker;
+  }
+}
+
 .center-layout {
   display: flex;
   align-items: center;

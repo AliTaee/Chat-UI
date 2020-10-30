@@ -36,23 +36,13 @@
 }
 
 .contacts-button {
-  background-color: $primary-blue;
+  @extend .button;
   width: calc(100% - 10px);
-  cursor: pointer;
-  text-transform: capitalize;
-  color: $primary-white;
-  border: none;
-  outline: none;
-  border-radius: 5px;
+  justify-content: center;
   margin: 5px;
   padding: 10px;
-
-  & .svg-icon {
+  .hand-wave {
     margin-left: 6px;
-  }
-
-  &:hover {
-    background-color: $primary-blue-darker;
   }
 }
 
