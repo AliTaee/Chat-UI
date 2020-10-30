@@ -1,0 +1,15 @@
+.contact-info {
+  @extend .main-section;
+
+  .profile {
+    flex-direction: column;
+
+    &__header {
+      cursor: default;
+    }
+  }
+
+  .contacts-button {
+    margin-top: 12px;
+  }
+}
