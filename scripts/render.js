@@ -77,8 +77,8 @@ function setMessages(id, avatar, userProfile) {
 
     if (messageItem.isFromFriend) {
       avatarImage = avatar
-      chatText.classList.add('chat-page__text--freind')
-      chatTextsWrapper.classList.add('chat-page__texts--freind')
+      chatText.classList.add('chat-page__text--friend')
+      chatTextsWrapper.classList.add('chat-page__texts--friend')
     } else {
       avatarImage = userProfile.avatar
     }
