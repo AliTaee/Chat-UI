@@ -47,7 +47,7 @@
   max-height: 90px;
 }
 
-@media only screen and (max-width: $layout-tablet-width + 100) {
+@media only screen and (max-width: $layout-desktop-width) {
   .modal {
     &__wrapper {
       width: 50%;
