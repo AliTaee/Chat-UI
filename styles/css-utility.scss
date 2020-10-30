@@ -22,7 +22,7 @@
 
   /* Track */
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: $primary-white;
   }
 
   /* Handle */
@@ -32,7 +32,7 @@
 
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: lighten($primary-light, 5%);
+    background: $primary-lighter;
   }
 }
 

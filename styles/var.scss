@@ -2,11 +2,15 @@
 * Colors
 */
 $primary-light: #242f3d;
+$primary-lighter: lighten($primary-light, 5%);
+$primary-light-background: rgba($primary-light, 0.7);
 $primary-light-hover: #28303c;
 $primary-main: #17212b;
+
 $primary-dark: #0e1621;
 $primary-white: #fefefe;
 $primary-blue: #2b5278;
+$primary-blue-darker: darken($primary-blue, 5%);
 
 $gray: #9e9e9e;
 

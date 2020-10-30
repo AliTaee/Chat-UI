@@ -8,10 +8,10 @@
   height: 100%;
   overflow: auto;
   background-color: $gray;
-  background-color: rgba($primary-light, 0.7);
+  background-color: $primary-light-background;
 
   &__wrapper {
-    background-color: lighten($primary-light, 5%);
+    background-color: $primary-lighter;
     position: absolute;
     top: 50%;
     right: 50%;
