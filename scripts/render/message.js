@@ -1,5 +1,5 @@
-import { getState } from '../../index'
 import { autoHeight } from '../dom-utility'
+import { setState, getState } from '../../index'
 import { elementsIdClassNames } from '../elements-id-class-names'
 import { scrollToElement, createReplySvgIcon } from '../dom-utility'
 
@@ -106,6 +106,7 @@ SendButtonElement.addEventListener('click', () => {
   messageInputElement.value = ''
   messageInputElement.style.height = '23px'
 
+  setState('contacts', newChatLists)
   renderNewMessage(newMessageText, userProfile)
   scrollToElement('message-lists')
 })
