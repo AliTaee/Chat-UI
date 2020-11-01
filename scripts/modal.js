@@ -1,11 +1,14 @@
-import { renderContacts } from './render'
 import { getState } from '../index'
+import { renderContacts } from './render/render-contacts'
+import { elementsIdClassNames } from './elements-id-class-names'
 
-const contactsButton = document.getElementById('contacts-button')
-const profileHeader = document.getElementById('profile-header')
-const modalContent = document.getElementById('modal-content')
-const modalClose = document.getElementById('modal-close')
-const modal = document.getElementById('modal')
+const {
+  modal,
+  modalClose,
+  modalContent,
+  profileHeader,
+  contactsButton,
+} = elementsIdClassNames
 
 export function closeModal() {
   modal.style.display = 'none'
