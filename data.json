@@ -1,0 +1,323 @@
+{
+    "contacts": [{
+			"id": 0,
+			"name": "Android",
+			"userName": "android",
+			"avatar": "./user-profile/android.png",
+			"about": "Android is Cool",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Hi how are you?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "Hi, I'm fine how about you?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "what are you doing?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "I'm good thanks."
+			}]
+		},
+		{
+			"id": 1,
+			"name": "Google",
+			"userName": "google",
+			"avatar": "./user-profile/google.png",
+			"about": "Ask me anything!",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": true,
+				"date": null,
+				"message": "What do you want to know?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "React or Vue?"
+			}]
+		},
+		{
+			"id": 2,
+			"name": "React",
+			"userName": "reactjs",
+			"avatar": "./user-profile/react.png",
+			"about": "A JavaScript library for building user interfaces",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "What is JSX?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like."
+			}]
+		},
+		{
+			"id": 3,
+			"name": "Vue",
+			"userName": "vuejs",
+			"avatar": "./user-profile/vue.png",
+			"about": "The Progressive JavaScript Framework",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "why Vue.js?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries."
+			}]
+		},
+		{
+			"id": 4,
+			"name": "google",
+			"userName": "google2",
+			"avatar": "./user-profile/google.png",
+			"about": "Google me",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Hi how are you?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "Hi, I'm fine how about you?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "I'm good thanks."
+			}]
+		},
+		{
+			"id": 5,
+			"name": "Spotify",
+			"userName": "spotify",
+			"avatar": "./user-profile/spotify.png",
+			"about": "Listen to Music!",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": true,
+				"date": null,
+				"message": "What do you want to know?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+			}]
+		},
+		{
+			"id": 6,
+			"name": "Pinterest",
+			"userName": "pinterest",
+			"avatar": "./user-profile/pinterest.png",
+			"about": "Pinterest is cool",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "What is pinterest?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+			}]
+		},
+		{
+			"id": 7,
+			"name": "grunt",
+			"userName": "grunt",
+			"avatar": "./user-profile/grunt.png",
+			"about": "grunt is Cool",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "why grunt?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+			}]
+		},
+		{
+			"id": 8,
+			"name": "Android",
+			"userName": "android2",
+			"avatar": "./user-profile/android.png",
+			"about": "Android is Cool",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Hi how are you?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "Hi, I'm fine how about you?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "I'm good thanks."
+			}]
+		},
+		{
+			"id": 9,
+			"name": "Google",
+			"userName": "google3",
+			"avatar": "./user-profile/google.png",
+			"about": "Ask me anything!",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": true,
+				"date": null,
+				"message": "What do you want to know?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "React or Vue?"
+			}]
+		},
+		{
+			"id": 10,
+			"name": "React",
+			"userName": "react2js",
+			"avatar": "./user-profile/react.png",
+			"about": "A JavaScript library for building user interfaces",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "What is JSX?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like."
+			}]
+		},
+		{
+			"id": 11,
+			"name": "Vue",
+			"userName": "vue2js",
+			"avatar": "./user-profile/vue.png",
+			"about": "The Progressive JavaScript Framework",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "why Vue.js?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries."
+			}]
+		},
+		{
+			"id": 12,
+			"name": "google",
+			"userName": "google4",
+			"avatar": "./user-profile/google.png",
+			"about": "Google me",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Hi how are you?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "Hi, I'm fine how about you?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "I'm good thanks."
+			}]
+		},
+		{
+			"id": 13,
+			"name": "Spotify",
+			"userName": "spotify2",
+			"avatar": "./user-profile/spotify.png",
+			"about": "Listen to Music!",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": true,
+				"date": null,
+				"message": "What do you want to know?"
+			},
+			{
+				"isFromFriend": false,
+				"date": null,
+				"message": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+			}]
+		},
+		{
+			"id": 14,
+			"name": "Pinterest",
+			"userName": "pinterest2",
+			"avatar": "./user-profile/pinterest.png",
+			"about": "Pinterest is cool",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "What is pinterest?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+			}]
+		},
+		{
+			"id": 15,
+			"name": "grunt",
+			"userName": "grunt2",
+			"avatar": "./user-profile/grunt.png",
+			"about": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+			"tell": "09121702887",
+            "chats": [{
+				"isFromFriend": false,
+				"date": null,
+				"message": "why grunt?"
+			},
+			{
+				"isFromFriend": true,
+				"date": null,
+				"message": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+			}]
+        }
+	],
+	"userProfile":{
+		"id": 555,
+		"name": "Ali Taee",
+		"userName": "alitaeejs",
+		"avatar": "./user-profile/ali-taee.jpg",
+		"about": "Front-end Developer"
+	}
+}
