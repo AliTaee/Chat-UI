@@ -1,4 +1,6 @@
-# Telegram Chats List, Chat Page, and Contacts
+# Chat List, Chat Page, and Contacts
+
+![screenshot](./screenshot.png)
 
 **Chat Page:** A page with a list of messages, header with a profile picture, and one input in the bottom and a button for sending the message, after sending a message a reply will be shown in the list after 2 seconds, if you click on the header you will see user details.
 
@@ -14,7 +16,7 @@ After installing Node js, open your terminal (command line) in the root director
 
 ## Running the App
 
-After the installation, you can run the command `npm run dev` to start the app. It will be served on [http://localhost:1234](http://localhost:1234).
+After the installation, you can run the command `npm run dev` to start the app. It will be served on `http://localhost:1234`.
 
 ## Tools Used
 

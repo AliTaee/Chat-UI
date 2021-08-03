@@ -1,10 +1,10 @@
 {
-  "name": "telegram-chat",
+  "name": "chat-ui",
   "version": "1.0.0",
-  "description": "Front-end telegram chat",
+  "description": "Front-end Chat UI",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
+    "dev": "parcel index.html --open",
     "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
